@@ -19,6 +19,12 @@ import {
 	PhPlugCharging,
 } from "@phosphor-icons/vue";
 
+import bulb from '@/assets/a.png'
+import tapo from '@/assets/b.png'
+import roboRock from '@/assets/g.png'
+import smartTv from '@/assets/cc.png'
+import dator from '@/assets/hh.png'
+
 const isDark = useDark();
 const toggleTheme = useToggle(isDark);
 
@@ -123,26 +129,26 @@ const activeButton = ref(null);
 				<GridCard
 					class="row-start-2 min-h-[260px]"
 					:icon="PhLampPendant"
-					imageSrc="/src/assets/a.png"
+					:imageSrc="bulb"
 					text="3x Ljuslampa"
 				/>
 
 				<GridCard
 					class="row-start-2 min-h-[260px]"
 					:icon="PhPlugCharging"
-					imageSrc="/src/assets/b.png"
+					:imageSrc="tapo"
 					text="2x Smart kontakt"
 				/>
 				<GridCard
 					class="row-start-2 min-h-[260px]"
 					:icon="PhBroom"
-					imageSrc="/src/assets/g.png"
+					:imageSrc="roboRock"
 					text="Roborock S8"
 				/>
 				<GridCard
 					class="row-start-2 min-h-[260px]"
 					:icon="PhTelevisionSimple"
-					imageSrc="/src/assets/cc.png"
+					:imageSrc="smartTv"
 					text="Smart TV"
 				/>
 			</div>
@@ -150,7 +156,7 @@ const activeButton = ref(null);
 			<div class="col-span-4 flex jusitfy-between flex-wrap gap-5">
 				<GridCard
 					:icon="PhDesktopTower"
-					imageSrc="/src/assets/hh.png"
+					:imageSrc="dator"
 					text="Stationär dator"
 					class="w-[280px] max-w-full grow"
 				/>
