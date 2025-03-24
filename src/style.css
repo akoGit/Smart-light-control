@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 0 0% 3.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 0 0% 3.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 0 0% 3.9%;
+		--primary: 116 72% 69%;
+		--primary-foreground: 0 0% 98%;
+		--secondary: 0 0% 96.1%;
+		--secondary-foreground: 0 0% 9%;
+		--muted: 0 0% 96.1%;
+		--muted-foreground: 0 0% 45.1%;
+		--accent: 0 0% 96.1%;
+		--accent-foreground: 0 0% 9%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 0 0% 89.8%;
+		--input: 0 0% 89.8%;
+		--ring: 0 0% 3.9%;
+		--chart-1: 12 76% 61%;
+		--chart-2: 173 58% 39%;
+		--chart-3: 197 37% 24%;
+		--chart-4: 43 74% 66%;
+		--chart-5: 27 87% 67%;
+		--radius: 0.5rem;
+
+		/* ... */
+		--vis-tooltip-background-color: none !important;
+		--vis-tooltip-border-color: none !important;
+		--vis-tooltip-text-color: none !important;
+		--vis-tooltip-shadow-color: none !important;
+		--vis-tooltip-backdrop-filter: none !important;
+		--vis-tooltip-padding: none !important;
+
+		--vis-primary-color: var(--primary);
+		/* change to any hsl value you want */
+		--vis-secondary-color: 160 81% 40%;
+		--vis-text-color: var(--muted-foreground);
+
+		--main-background: #f0fbff;
+		--grid-card-bg: linear-gradient(180deg, #ffffff 0%, #f0fbff 100%);
+		--grid-card-hov: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+		--grid-card-shadow: 0px 16px 24px rgba(38, 42, 45, 0.08);
+
+		--grid-border-col: 1px solid #ffffff;
+		--grid-icon-col: #262a2d3d;
+
+		--nav-bg: hsla(0, 0%, 100%, 1);
+		--icon-col: #262a2d;
+
+		--span-text-col: #262a2db8;
+		--sun-icon: #f9c842;
+
+		--base-btn-grad: linear-gradient(180deg, #262a2d 0%, #7c8993 100%);
+		--base-icon-col: #262a2db8;
+
+		--btn-text-col: rgba(240, 251, 255, 0.85);
+	}
+	.dark {
+		--background: 0 0% 3.9%;
+		--foreground: 0 0% 98%;
+		--card: 0 0% 3.9%;
+		--card-foreground: 0 0% 98%;
+		--popover: 0 0% 3.9%;
+		--popover-foreground: 0 0% 98%;
+		--primary: 94 99% 73%;
+		--primary-foreground: 0 0% 9%;
+		--secondary: 0 0% 14.9%;
+		--secondary-foreground: 0 0% 98%;
+		--muted: 0 0% 14.9%;
+		--muted-foreground: 0 0% 63.9%;
+		--accent: 0 0% 14.9%;
+		--accent-foreground: 0 0% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 0 0% 14.9%;
+		--input: 0 0% 14.9%;
+		--ring: 0 0% 83.1%;
+		--chart-1: 220 70% 50%;
+		--chart-2: 160 60% 45%;
+		--chart-3: 30 80% 55%;
+		--chart-4: 280 65% 60%;
+		--chart-5: 340 75% 55%;
+
+		--main-background: #262a2d;
+
+		--grid-card-bg: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.08) 0%,
+			rgba(240, 251, 255, 0) 100%
+		);
+		--grid-card-hov: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.08) 0%,
+			rgba(240, 251, 255, 0.08) 100%
+		);
+		--grid-card-shadow: 0px 16px 24px 0px #1f1f1f14;
+
+		--grid-border-col: 1px solid #7996a729;
+		--grid-icon-col: #f0fbff3d;
+		--nav-bg: hsla(0, 0%, 12%, 1);
+		--icon-col: #f0fbff;
+
+		--span-text-col: #f0fbffb8;
+		--sun-icon: #f99f42;
+
+		--base-btn-grad: #c992e1;
+		--base-icon-col: #f0fbffd9;
+		--btn-text-col: rgba(38, 42, 45, 0.72);
+	}
+}
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+#app {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* max-width: 780px; */
+	/* background-color: #F0FBFF; */
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	position: relative;
+	z-index: 10;
+}
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+}
+#myVideo:not([controls]):picture-in-picture {
+	opacity: 0;
+}
+
+:picture-in-picture {
+	display: none;
+}
+
+body {
+	background-color: var(--main-background);
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
