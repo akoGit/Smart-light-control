@@ -63,6 +63,10 @@
 		--base-icon-col: #262a2db8;
 
 		--btn-text-col: rgba(240, 251, 255, 0.85);
+
+		--switch-btn: #ffffff;
+		--switch-bg-col: #262a2d14;
+		--switch-bg-act: #81e979;
 	}
 	.dark {
 		--background: 0 0% 3.9%;
@@ -115,6 +119,10 @@
 		--base-btn-grad: #c992e1;
 		--base-icon-col: #f0fbffd9;
 		--btn-text-col: rgba(38, 42, 45, 0.72);
+
+		/* --switch-btn: #ffffff; */
+		--switch-bg-col: #f0fbff14;
+		--switch-bg-act: #b0fe76;
 	}
 }
 @layer base {
@@ -131,12 +139,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* max-width: 780px; */
-	/* background-color: #F0FBFF; */
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
 	position: relative;
 	z-index: 10;
+	direction: ltr;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #myVideo {
@@ -159,6 +170,5 @@ body {
 	background-color: var(--main-background);
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
 	font-style: normal;
 }

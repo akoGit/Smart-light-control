@@ -19,4 +19,12 @@ defineProps({
 	</button>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 510px) {
+	button {
+		font-size: 0.7em;
+		padding-left: 0.325rem;
+		padding-right: 0.325rem;
+	}
+}
+</style>

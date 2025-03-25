@@ -1,5 +1,5 @@
 <script setup>
-import { Switch } from "@/components/ui/switch";
+import SwitchV from "@/components/SwitchV.vue";
 import { defineProps } from "vue";
 
 const props = defineProps({
@@ -31,7 +31,7 @@ const props = defineProps({
 				class="fill-gridIconCol"
 				size="24"
 			/>
-			<Switch />
+			<SwitchV />
 		</div>
 
 		<div class="flex justify-center w-full">
@@ -47,7 +47,7 @@ const props = defineProps({
 	background: var(--grid-card-bg);
 	border: var(--grid-border-col);
 	border-radius: 4px;
-	transition: all 0.3s;
+	transition: background-color 0.3s;
 }
 
 #grid-card:hover {

@@ -19,11 +19,11 @@ import {
 	PhPlugCharging,
 } from "@phosphor-icons/vue";
 
-import bulb from '@/assets/a.png'
-import tapo from '@/assets/b.png'
-import roboRock from '@/assets/g.png'
-import smartTv from '@/assets/cc.png'
-import dator from '@/assets/hh.png'
+import bulb from "@/assets/a.png";
+import tapo from "@/assets/b.png";
+import roboRock from "@/assets/g.png";
+import smartTv from "@/assets/cc.png";
+import dator from "@/assets/hh.png";
 
 const isDark = useDark();
 const toggleTheme = useToggle(isDark);
@@ -40,6 +40,7 @@ const activeButton = ref(null);
 			<div class="flex">
 				<h1
 					class="font-light text-4xl dark:[#F0FBFF] mr-4 whitespace-nowrap"
+					id="header_text"
 				>
 					Hej, god morgon
 				</h1>
@@ -121,7 +122,7 @@ const activeButton = ref(null);
 					<Weather />
 				</div>
 
-				<div class="rounded-sm w-[280px] h-full grow" id="chrt">
+				<div class="rounded-sm w-[280px] h-full grow p-2" id="chrt">
 					<Chart />
 				</div>
 			</div>
@@ -189,6 +190,12 @@ const activeButton = ref(null);
 @media (max-width: 640px) {
 	#header {
 		flex-direction: column;
+	}
+}
+
+@media (max-width: 460px) {
+	#header_text {
+		font-size: 1.6rem;
 	}
 }
 .bg-gradient {

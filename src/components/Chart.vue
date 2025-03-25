@@ -26,16 +26,27 @@ const config = {
 				grid: {
 					display: false,
 				},
+				ticks: {
+					font: {
+						size: 10,
+					},
+				},
 			},
 			y: {
 				beginAtZero: true,
 				max: 100,
 				ticks: {
 					stepSize: 25,
-					count: 5,
+					font: {
+						size: 10,
+					},
+					align: "center",
 				},
 				grid: {
 					display: true,
+				},
+				border: {
+					display: false,
 				},
 			},
 		},
@@ -46,9 +57,11 @@ const config = {
 			tooltip: {
 				backgroundColor: "rgba(121, 150, 167, 1)",
 				bodyAlign: "top",
-				boxWidth: 39,
+				// boxWidth: 55,
+				// padding: 8,
 				xAlign: "center",
 				yAlign: "bottom",
+				cornerRadius: 2,
 				callbacks: {
 					label: function (context) {
 						return context.parsed.y + " kw";
@@ -74,3 +87,5 @@ onMounted(() => {
 	<h1 class="ml-1.5 text-sm text-spanTextCol mb-2">Energiförbrukning</h1>
 	<canvas id="myChart" class="w-full h-full"></canvas>
 </template>
+
+<style></style>

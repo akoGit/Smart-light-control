@@ -11,24 +11,27 @@ import { PhSun, PhCircle } from "@phosphor-icons/vue";
 		</div>
 	</div>
 
-	<div class="flex flex-col items-end text-right">
-		<span class="text-xs text-spanTextCol font-medium">LKI — 67</span>
-		<span class="text-xs text-spanTextCol font-medium"
-			>Fuktighet — 80%</span
-		>
-		<span class="text-xs text-spanTextCol font-medium">Nederbörd — 8%</span>
-		<span class="text-xs text-spanTextCol font-medium">Vind — 14 kph</span>
-		<span class="circ">
-			<PhCircle :size="16" class="fill-iconColor" weight="light"
+	<div class="flex flex-col justify-between items-end text-right">
+		<div class="flex flex-col gap-[10px]">
+			<span class="text-xs text-spanTextCol font-medium">LKI — 67</span>
+			<span class="text-xs text-spanTextCol font-medium"
+				>Fuktighet — 80%</span
+			>
+			<span class="text-xs text-spanTextCol font-medium"
+				>Nederbörd — 8%</span
+			>
+			<span class="text-xs text-spanTextCol font-medium"
+				>Vind — 14 kph</span
+			>
+		</div>
+
+		<span>
+			<PhCircle :size="8" class="fill-iconColor" weight="bold"
 		/></span>
 	</div>
 </template>
 
 <style scoped>
-.circ {
-	margin-block: auto 0;
-}
-
 .faren {
 	margin-block: 0 auto;
 }
