@@ -1,10 +1,13 @@
 <script setup>
 import { PhSun, PhCircle } from "@phosphor-icons/vue";
+import { useDateFormat, useNow } from "@vueuse/core";
+
+const formatted = useDateFormat(useNow(), "dddd, D MMM · H:m A");
 </script>
 
 <template>
 	<div class="flex flex-col justify-between text-left">
-		<h3>Manda, 10 mars · 08:12 AM</h3>
+		<h3>{{ formatted }}</h3>
 		<div class="flex items-center justify-start gap-2">
 			<PhSun :size="40" class="fill-sunIcon" weight="duotone" />
 			<span class="text-5xl">39</span><span class="faren">°F°C</span>
