@@ -47,7 +47,9 @@ const props = defineProps({
 	background: var(--grid-card-bg);
 	border: var(--grid-border-col);
 	border-radius: 4px;
-	transition: background-color 0.3s;
+	transition:
+		background-color 0.3s,
+		box-shadow 0.3s;
 }
 
 #grid-card:hover {

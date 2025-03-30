@@ -60,5 +60,8 @@ nav {
 	padding: 2rem;
 	background-color: var(--nav-bg);
 	z-index: 2;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
 }
 </style>

@@ -131,6 +131,9 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+		transition:
+			background-color 0.3s ease-in-out,
+			color 0.3s ease-in-out;
 	}
 }
 
@@ -171,4 +174,7 @@ body {
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
 }
