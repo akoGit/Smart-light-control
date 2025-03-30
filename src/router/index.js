@@ -1,10 +1,10 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Overview from "@/views/Overview.vue";
 import FloorPlan from "@/views/FloorPlan.vue";
 import Security from "@/views/Security.vue";
 
 const router = createRouter({
-	history: createWebHistory(import.meta.env.BASE_URL),
+	history: createWebHashHistory(),
 	routes: [
 		{
 			path: "/Overview",
