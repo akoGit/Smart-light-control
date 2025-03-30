@@ -12,7 +12,7 @@ import floorPLanPng from "@/assets/better-floor.png";
 
 <template>
 	<div class="max-w-[780px] w-full mt-8 relative">
-		<img :imageSrc="floorPlanPng" class="w-full h-auto max-w-full" />
+		<img :src="floorPlanPng" class="w-full h-auto max-w-full" />
 
 		<span class="planIcon bed"
 			><PhBed :size="24" weight="duotone" color="#000000"
