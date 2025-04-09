@@ -3,6 +3,12 @@ import Sidebar from "@/components/Sidebar.vue";
 import Header from "@/components/Header.vue";
 
 import { RouterView } from "vue-router";
+import { onMounted } from "vue";
+
+onMounted(() => {
+	const img = new Image();
+	img.src = "./better-floor.png";
+});
 </script>
 
 <template>

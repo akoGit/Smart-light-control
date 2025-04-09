@@ -126,9 +126,9 @@
 	}
 }
 @layer base {
-	* {
+	/* * {
 		@apply border-border;
-	}
+	} */
 	body {
 		@apply bg-background text-foreground;
 		transition:
@@ -169,6 +169,10 @@
 	display: none;
 }
 
+html {
+scrollbar-gutter: stable;
+}
+
 body {
 	background-color: var(--main-background);
 	font-family: "Inter", sans-serif;
@@ -177,4 +181,5 @@ body {
 	transition:
 		background-color 0.3s,
 		color 0.3s;
+    /* scrollbar-gutter: stable; */
 }

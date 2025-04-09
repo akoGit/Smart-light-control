@@ -7,13 +7,14 @@ import {
 	PhCookingPot,
 	PhMinus,
 } from "@phosphor-icons/vue";
-// import floorPLanPng from "@/public/better-floor.png";
-// console.log("Floor plan path:", florPlanPng);
 </script>
 
 <template>
 	<div class="max-w-[780px] w-full mt-8 relative">
-		<img src="/better-floor.png" class="w-full h-auto max-w-full" />
+		<img
+			src="/better-floor.png"
+			class="w-full h-auto max-w-full aspect-[780/500]"
+		/>
 
 		<span class="planIcon bed"
 			><PhBed :size="24" weight="duotone" color="#000000"

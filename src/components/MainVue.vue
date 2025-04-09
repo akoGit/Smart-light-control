@@ -101,7 +101,4 @@ import dator from "@/assets/hh.png";
 	background: var(--grid-card-bg);
 	border: var(--grid-border-col);
 }
-.Cctv {
-	transform: rotateY(180deg);
-}
 </style>

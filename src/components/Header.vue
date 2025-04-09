@@ -34,7 +34,7 @@ const activeButton = ref(null);
 </script>
 
 <template>
-	<div class="flex justify-between items-center mb-14 px-8 py-0" id="header">
+	<div class="flex justify-between items-center mb-14 mt-14 px-8 py-0" id="header">
 		<div class="flex">
 			<h1
 				class="font-light text-4xl dark:[#F0FBFF] mr-4 whitespace-nowrap"
@@ -208,10 +208,13 @@ const activeButton = ref(null);
 #nav_baner {
 	border: var(--grid-border-col);
 }
-
-@media (max-width: 535px) {
-	#nav_baner > button > svg {
-		width: 18px;
-	}
+.Cctv {
+	transform: rotateY(180deg);
 }
+
+/* @media (max-width: 535px) {
+	#nav_baner > svg {
+		width: 16px;
+	}
+} */
 </style>
